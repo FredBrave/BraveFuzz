@@ -1,4 +1,4 @@
-import requests, signal, sys, optparse, re, os 
+import requests, signal, sys, optparse, re 
 import threading
 import pyfiglet
 import mmap
@@ -30,9 +30,9 @@ def get_arguments():
     parser = optparse.OptionParser()
     parser.add_option('-u', '--url', dest= 'url_address', help= 'The url address of the target')
     parser.add_option('-w', '--wordlist', dest= 'wordlist_file', help= 'The wordlist with the data')
-    parser.add_option('-e', '--extension', dest='extenfion_file', help='Add a file extension')
-    parser.add_option('', '--fs', dest='size_filter', help='Filter size')
-    parser.add_option('', '--fw', dest='words_filter', help='Filter words')
+    #parser.add_option('-e', '--extension', dest='extenfion_file', help='Add a file extension')
+    #parser.add_option('', '--fs', dest='size_filter', help='Filter size')
+    #parser.add_option('', '--fw', dest='words_filter', help='Filter words')
     parser.add_option("-t", "--threads", dest="num_threads", help="Enter the number of threads (Default 10)", default=10, type=int)
     (options, arguments) = parser.parse_args()
     if not options.url_address:
